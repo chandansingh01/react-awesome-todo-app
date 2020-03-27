@@ -1,0 +1,16 @@
+@import './variables';
+
+.clear_button {
+      border: 0;
+      font-size:14px;
+      text-decoration: none;
+      color: $hashtag;
+      padding:4px;
+      font-style: italic;
+      cursor: pointer;
+      background: transparent;
+      color: $red;
+      &:focus{
+            outline:0;
+      }
+}
