@@ -12,4 +12,7 @@ button {
       &:focus{
             outline:0;
       }
+      &:hover{
+            font-weight: 300;
+      }
 }

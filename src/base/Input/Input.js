@@ -8,7 +8,7 @@ export default function Input(props) {
             <div className="input-wrapper">
                   <form action="" onSubmit={props.onSubmit}>
                         <input className="todo-input"
-                              type="text" placeholder="what are your plans?"
+                              type="text" placeholder="What are your plans?"
                               onChange={props.setInput}
                               value={props.value}
                         />
