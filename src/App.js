@@ -131,13 +131,14 @@ function App() {
 
         {/* iterate over the elements in the todo array to show the todo list */}
 
-        <TransitionGroup>          
+        <TransitionGroup timeout={500}>  
+                
             {
           filterData().map((todo,index) => {
-            return ( <CSSTransition key={todo.id} classNames="my-node">
+            return ( <CSSTransition key={todo.id} timeout={500} classNames="my-node">
               <Todo               
               todo={todo}
-              timeout={500}              
+                          
               addFilters={addFilters}              
               onClick={() => markComplete(index)} />
               </CSSTransition>
