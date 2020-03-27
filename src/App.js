@@ -30,7 +30,7 @@ function App() {
     let temp = [...todos];
 
     let newTodo = {
-      id:Math.floor(Math.random() * 100),
+      id:'_' + Math.random().toString(36).substr(2, 9),
       heading: input,
       completed: false,
       color:color
@@ -63,8 +63,11 @@ function App() {
   //change completed to true will set task to done.
   //find the todo item by the heading. 
   //mark it completed then place it to the array recent first.
-  function markComplete(todoIndex) {
+  function markComplete(id) {
     let tempTodos = [...todos];            
+    let todoIndex = tempTodos.findIndex(item=>item.id===id)
+    console.log(todoIndex);
+    
     if (todoIndex>=0&&!tempTodos[todoIndex].completed) {
       let temp = { ...tempTodos[todoIndex] };
       temp.completed = true;
@@ -140,7 +143,7 @@ function App() {
               todo={todo}
                           
               addFilters={addFilters}              
-              onClick={() => markComplete(index)} />
+              onClick={() => markComplete(todo.id)} />
               </CSSTransition>
             )
           })
