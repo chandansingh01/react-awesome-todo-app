@@ -111,7 +111,7 @@ function App() {
       </div>
         
         {/* input for todo item */}
-        <div>
+        <div className='sticky-input'>
           <TodoInput onSubmit={addToTodos}
             setInput={(e) => setInput(e.target.value)}
             value={input} />
