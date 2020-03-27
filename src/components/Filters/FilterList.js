@@ -9,7 +9,7 @@ export default function FilterList(props) {
                   <div className='filter-list'>
                   {
                         props.filters.map((item,index)=>{
-                              return <HashButton key={index} onClick={()=>props.removeFilter(item)}>{item}</HashButton>
+                              return <HashButton style={{cursor:'text'}} key={index}>{item}</HashButton>
                         })
                   }
                   </div>
